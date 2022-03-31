@@ -1,0 +1,20 @@
+#Async vs Completablefuture 비교
+
+동기와 비동기, 블록과 논블록은 계속되는 논쟁같다. 사람마다 생각은 다르고 사람 마다 이해하는것은 다르기 때문이다.
+
+때는 개발자로 첫 발을 내딛었을때 2주차에 팀장님이 동기와 비동기의 차이를 아세요? 라는 질문에 나는 아무말도 할 수 없었다.
+
+동기처리 방식(synchronous) = 동시에 이뤄지는 처리.(직렬적)
+
+처리가 동시에 이뤄지는 방식, 예를 들어 A의 함수와 B의 함수를 A와 B를 순서대로 호출했을때 A의 함수를 호출하고 A의 처리가 다 끝난뒤 B의 함수처리를 하는 방식.
+
+![https://blog.kakaocdn.net/dn/FBE4V/btqYTNCd9JB/xgR0KtRfKZZjfk2NCmnYQ1/img.png](https://blog.kakaocdn.net/dn/FBE4V/btqYTNCd9JB/xgR0KtRfKZZjfk2NCmnYQ1/img.png)
+
+비동기 처리 방식(asynchronous) = 동시에 일어나지 않는 처리.(병렬적)
+
+처리가 동시에 이뤄지지 않는 방식, 예를 들어 A의 함수와 B의 함수를 A와 B를 순서대로 호출했을때 A의 함수를 호출하고 A의 처리가 완료되지 않은 상태에서 바로 B의 함수처리를 하는 방식.
+
+![https://blog.kakaocdn.net/dn/3nblU/btqYN1A29Cs/1YQ4y0k7CfydMVLh8cCfZK/img.gif](https://blog.kakaocdn.net/dn/3nblU/btqYN1A29Cs/1YQ4y0k7CfydMVLh8cCfZK/img.gif)
+
+블록킹 vs 논블록킹
+Sync Async 는 메소드를 제공 하는 곳에 대한 입장인것에 반해 Blocking, Non-Blocking 은 메소드를 호출하는 클라이언트의 입장이다.
